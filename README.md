@@ -43,7 +43,7 @@ S5000/S6000 Operator's Manual, so if you know the hardware you already know this
 
 | Source | Read |
 |---|---|
-| Computer folders | `.AKM`, `.AKP`, `.WAV`, `.AIF` (root note + loop from the `smpl` chunk) |
+| Computer folders | `.AKM`, `.AKP`, `.WAV`, `.AIF` / `.AIFF` (root note + loop from the `smpl` chunk), `.MP3`, `.FLAC`, `.OGG` |
 | `.iso`, `.cdr`, `.toast` | ISO9660 / Joliet CD-ROMs |
 | `.bin` / `.img` (2352-byte sectors) | Raw CD images |
 | `.img`, `.ima`, `.hds`, `.dsk`, `.raw` | FAT12/16/32 (S5000/S6000 disks), **Akai S1000/S3000** hard disks & CD-ROMs (partitions A, B, C…, volumes) and S1000 floppies |
@@ -84,7 +84,7 @@ Then rescan plug-ins in your DAW. In Logic, the AU appears under **AU Instrument
 
 ## Quick start
 
-1. Press **LOAD**, then **DISK TOOLS › MOUNT IMAGE…** (or drag an `.iso` / `.img` onto the plug-in).
+1. Press **LOAD**, then **DISK TOOLS › MOUNT / LOAD FILE** to mount an `.iso` / `.img` or load `.wav` / `.aif` / `.mp3` files (or simply drag them onto the plug-in).
 2. Open a partition and a volume, select a program and press **LOAD PROGRAM** (keep *WITH SAMPLES* checked).
 3. Press **MULTI** — the program is assigned to Part 1. Play!
 4. Put a folder named `AUTOLOAD` in `Documents/S6000` to load it automatically on start-up.

@@ -121,7 +121,9 @@ void classifyByName (VNode& n)
     const std::string ext = dot == std::string::npos ? std::string() : toUpper (n.name.substr (dot + 1));
 
     if (ext == "WAV")                     { n.type = VNode::Type::Sample;  n.kind = VNode::Kind::Wav; }
-    else if (ext == "AIF" || ext == "AIFF") { n.type = VNode::Type::Sample;  n.kind = VNode::Kind::Aiff; }
+    else if (ext == "AIF" || ext == "AIFF" || ext == "AIFC") { n.type = VNode::Type::Sample;  n.kind = VNode::Kind::Aiff; }
+    else if (ext == "MP3")                { n.type = VNode::Type::Sample;  n.kind = VNode::Kind::Mp3; }
+    else if (ext == "FLAC" || ext == "OGG") { n.type = VNode::Type::Sample;  n.kind = VNode::Kind::Compressed; }
     else if (ext == "AKP")                { n.type = VNode::Type::Program; n.kind = VNode::Kind::Akp; }
     else if (ext == "AKM")                { n.type = VNode::Type::Multi;   n.kind = VNode::Kind::Akm; }
     else if (ext == "ISO" || ext == "IMG" || ext == "DMG" || ext == "BIN" || ext == "CDR"

@@ -123,6 +123,7 @@ struct VNode : public std::enable_shared_from_this<VNode>
         None,
         HostFile,     // a file on the host file system (path in hostPath)
         Wav, Aiff,    // PCM sample files
+        Mp3, Compressed,  // MP3 / FLAC / OGG (decoded to RAM on load)
         Akp, Akm,     // S5000/S6000 program / multi
         S1000Program, S1000Sample, S3000Program, S3000Sample,
         DiskImage     // .iso / .img / .dmg / .bin ... (mountable)

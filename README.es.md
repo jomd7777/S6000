@@ -41,7 +41,7 @@ S1000/S3000 de 2 particiones con bloques fragmentados y disquete S1000, y compru
 
 | Origen | Qué se lee |
 |---|---|
-| Carpetas de tu ordenador (**S6000 HD** y **COMPUTER**) | `.AKM` multis, `.AKP` programas, `.WAV` / `.AIF` (lee el *smpl*: nota raíz y loop) |
+| Carpetas de tu ordenador (**S6000 HD** y **COMPUTER**) | `.AKM` multis, `.AKP` programas, `.WAV` / `.AIF` / `.AIFF` (lee el *smpl*: nota raíz y loop), `.MP3`, `.FLAC`, `.OGG` |
 | `.iso`, `.cdr`, `.toast` | CD‑ROM ISO9660 / Joliet |
 | `.bin` / `.img` de 2352 bytes | CD en bruto (MODE1 / MODE2) |
 | `.img`, `.ima`, `.hds`, `.dsk`, `.raw` | FAT12/16/32 (discos del S5000/S6000, con MBR y particiones), **Akai S1000/S3000** (disco duro y CD‑ROM: particiones A, B, C…, volúmenes, FAT) y **disquetes S1000** (800K/1.6MB) |

@@ -39,19 +39,24 @@ namespace
         return juce::String ((int) s);
     }
 
+    /** MOUNT IMAGE / LOAD FILE: disk images are mounted, audio and Akai files are loaded straight away. */
     void chooseImage (Ctx& c, std::unique_ptr<juce::FileChooser>& holder)
     {
-        holder = std::make_unique<juce::FileChooser> ("Mount disk image (CD-ROM / HD / floppy)", juce::File(),
-                                                      "*.iso;*.img;*.dmg;*.bin;*.cdr;*.hds;*.toast;*.ima;*.raw;*.dsk");
-        holder->launchAsync (juce::FileBrowserComponent::openMode | juce::FileBrowserComponent::canSelectFiles,
+        holder = std::make_unique<juce::FileChooser> ("Mount a disk image or load audio / Akai files", juce::File(),
+                                                      "*.iso;*.img;*.dmg;*.bin;*.cdr;*.hds;*.toast;*.ima;*.raw;*.dsk;"
+                                                      "*.wav;*.aif;*.aiff;*.aifc;*.mp3;*.flac;*.ogg;*.akp;*.akm");
+        holder->launchAsync (juce::FileBrowserComponent::openMode | juce::FileBrowserComponent::canSelectFiles
+                                 | juce::FileBrowserComponent::canSelectMultipleItems,
                              [&c] (const juce::FileChooser& fc)
                              {
-                                 auto f = fc.getResult();
-                                 if (f.existsAsFile())
+                                 bool any = false;
+                                 for (auto& f : fc.getResults())
                                  {
-                                     c.disk.mountImage (f);
-                                     c.pages->pushPopup (std::make_unique<ProgressPopup> (c));
+                                     if (! f.existsAsFile()) continue;
+                                     c.disk.loadHostFile (f);      // mounts images, loads everything else
+                                     any = true;
                                  }
+                                 if (any) c.pages->pushPopup (std::make_unique<ProgressPopup> (c));
                              });
     }
 
@@ -257,6 +262,10 @@ private:
         if (c->kind == VNode::Kind::S1000Sample || c->kind == VNode::Kind::S1000Program) l.add ("FORMAT: AKAI S1000");
         if (c->kind == VNode::Kind::S3000Sample || c->kind == VNode::Kind::S3000Program) l.add ("FORMAT: AKAI S3000");
         if (c->kind == VNode::Kind::Akp || c->kind == VNode::Kind::Akm) l.add ("FORMAT: AKAI S5000/S6000");
+        if (c->kind == VNode::Kind::Wav) l.add ("FORMAT: WAV");
+        if (c->kind == VNode::Kind::Aiff) l.add ("FORMAT: AIFF");
+        if (c->kind == VNode::Kind::Mp3) l.add ("FORMAT: MP3");
+        if (c->kind == VNode::Kind::Compressed) l.add ("FORMAT: " + juce::String (c->name).fromLastOccurrenceOf (".", false, false).toUpperCase());
         if (c->isContainer()) { c->ensurePopulated(); l.add ("CONTAINS: " + juce::String ((int) c->children.size()) + " ITEMS"); }
         else l.add ("SIZE: " + sizeText (c->size) + " BYTES");
         if (! c->dateTime.empty()) l.add ("DATE: " + juce::String (c->dateTime));
@@ -278,7 +287,7 @@ private:
         it.push_back ({ "VIEW NAME ONLY", [this] { view = 0; } });
         it.push_back ({ "VIEW SIZE", [this] { view = 1; } });
         it.push_back ({ "VIEW DATE+TIME", [this] { view = 2; } });
-        it.push_back ({ "MOUNT IMAGE...", [this] { chooseImage (ctx, chooser); } });
+        it.push_back ({ "MOUNT / LOAD FILE", [this] { chooseImage (ctx, chooser); } });
         it.push_back ({ "S6000 HD FOLDER", [this] { chooseHdFolder (ctx, chooser); } });
         ctx.pages->pushPopup (std::make_unique<MenuPopup> (ctx, "DISK TOOLS", it));
     }
@@ -372,7 +381,7 @@ public:
             ctx.info ("GET INFO", { d[(size_t) sel].name, "FORMAT: " + d[(size_t) sel].format, d[(size_t) sel].writable ? "READ / WRITE" : "READ ONLY" });
         });
         k[10] = button ("UPDATE", [this] { ctx.disk.refreshDisks(); });
-        k[11] = button ("MOUNT IMAGE...", [this] { chooseImage (ctx, chooser); });
+        k[11] = button ("MOUNT / LOAD FILE", [this] { chooseImage (ctx, chooser); });
         k[12] = button ("UNMOUNT", [this] { if (! ctx.disk.unmount (sel)) ctx.info ("UNMOUNT", { "This disk cannot", "be unmounted" }); });
         k[13] = button ("S6000 HD FOLDER", [this] { chooseHdFolder (ctx, chooser); });
         k[14] = button ("SELECT " + upArrow(), [this] { wheel (-1); });
