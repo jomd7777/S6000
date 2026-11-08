@@ -23,6 +23,7 @@ namespace s6k
 struct EngineSettings
 {
     std::atomic<int> editProgram { -1 };       // >= 0 : play this program on every channel (EDIT PROGRAM)
+    std::atomic<int> editSample { -1 };        // >= 0 : EDIT SAMPLE, MONITOR = RAW SAMPLE -> play this sample chromatically
     std::atomic<bool> mergeBtoA { true };
     std::atomic<int> transpose { 0 }, semitoneTune { 0 }, fineTune { 0 }, masterLevelDb { 0 };
     std::atomic<int> extApmController { 16 };
@@ -110,6 +111,7 @@ public:
 
 private:
     Memory& mem;
+    Program::Ptr rawProgram;     // one full-range keygroup used to play a raw sample (EDIT SAMPLE)
     double sr = 44100.0;
     float crHz = 1378.0f;
     std::array<Voice, maxVoices> voices;

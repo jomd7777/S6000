@@ -86,6 +86,7 @@ struct Ctx
     // current selections (as on the hardware these follow you between modes)
     int curProgram = 0, curKeygroup = 0, curZone = 0, curSample = 0, curPart = 0, partScroll = 0;
     bool editPartMode = false;
+    int sampleMonitor = 0;      // EDIT SAMPLE > MONITOR : 0 RAW SAMPLE, 1 PROGRAM
 
     Multi* multi() const;
     fmt::PartData* part() const;

@@ -209,7 +209,7 @@ public:
     {
         commonKeys (k, false);
         const bool ok = S() != nullptr;
-        k[1] = valueFn ("Monitor", [this] { return monitor; }, [this] (int v) { monitor = v; }, 0, 1, list ({ "RAW SAMPLE", "PROGRAM" }));
+        k[1] = valueFn ("Monitor", [this] { return ctx.sampleMonitor; }, [this] (int v) { ctx.sampleMonitor = v; }, 0, 1, list ({ "RAW SAMPLE", "PROGRAM" }));
         k[2] = button ("MASTER", [this] { ctx.pages->show (PageId::SampMaster); }, ok);
         k[3] = button ("TRIM", [this] { ctx.pages->show (PageId::SampTrim); }, ok);
         k[4] = button ("CHOP", [this] { ctx.pages->show (PageId::SampChop); }, ok);
@@ -251,12 +251,10 @@ public:
 
     void enterPlay (bool down) override
     {
-        if (monitor == 0) { SamplePage::enterPlay (down); return; }
+        if (ctx.sampleMonitor == 0) { SamplePage::enterPlay (down); return; }
         Page::enterPlay (down);
     }
 
-private:
-    int monitor = 0;
 };
 
 //==============================================================================

@@ -193,9 +193,6 @@ void PageManager::show (PageId id)
     ctx.clampSelections();
     p->onShow();
 
-    // EDIT PROGRAM plays the edited program on every channel (EDIT PART keeps the multi)
-    ctx.engine.settings.editProgram = (p->mode == Mode::Program && ! ctx.editPartMode && ctx.program() != nullptr) ? ctx.curProgram : -1;
-
     refresh();
     if (onPageChanged) onPageChanged (id);
 }
@@ -413,6 +410,23 @@ bool PageManager::tick()
 
 void PageManager::refresh()
 {
+    // what the MIDI keyboard plays depends on the mode (as on the hardware):
+    //  EDIT PROGRAM -> the edited program on every channel (EDIT PART keeps the multi)
+    //  EDIT SAMPLE  -> MONITOR RAW SAMPLE: the selected sample / PROGRAM: the current program
+    //  other modes  -> the multi
+    {
+        const Mode m = currentPage != nullptr ? currentPage->mode : Mode::None;
+        int ep = -1, es = -1;
+        if (m == Mode::Program && ! ctx.editPartMode && ctx.program() != nullptr) ep = ctx.curProgram;
+        if (m == Mode::Sample)
+        {
+            if (ctx.sampleMonitor == 0 && ctx.sample() != nullptr) es = ctx.curSample;
+            else if (ctx.sampleMonitor == 1 && ctx.program() != nullptr) ep = ctx.curProgram;
+        }
+        ctx.engine.settings.editProgram = ep;
+        ctx.engine.settings.editSample = es;
+    }
+
     if (currentPage != nullptr)
     {
         Keys k;

@@ -217,6 +217,7 @@ S6000AudioProcessorEditor::~S6000AudioProcessorEditor()
     proc.setZoom (zoom);
     proc.settings().saveIfNeeded();
     proc.engine.settings.editProgram = -1;
+    proc.engine.settings.editSample = -1;
 }
 
 void S6000AudioProcessorEditor::wireControls()

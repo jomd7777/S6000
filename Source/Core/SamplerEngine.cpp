@@ -14,6 +14,20 @@ using fmt::ProgramData;
 SamplerEngine::SamplerEngine (Memory& m) : mem (m)
 {
     for (auto& v : chanVolume) v = 1.0f;
+
+    // EDIT SAMPLE "RAW SAMPLE" monitor: plain playback, root note = sample's original note
+    rawProgram = new Program();
+    rawProgram->data.name = "RAW SAMPLE";
+    rawProgram->data.velSens = 30;
+    rawProgram->data.polyphony = 32;
+    fmt::KeygroupData kg;
+    kg.lowNote = 0; kg.highNote = 127;
+    kg.cutoff = 100; kg.resonance = 0;
+    kg.amp.attack = 0; kg.amp.decay = 50; kg.amp.sustain = 100; kg.amp.release = 20;
+    kg.zones[0].sampleName = "RAW";
+    kg.zones[0].playback = fmt::PlayAsSample;
+    rawProgram->data.keygroups.push_back (kg);
+    rawProgram->resolved.resize (1);
 }
 
 void SamplerEngine::prepare (double newSr, int)
@@ -178,6 +192,16 @@ void SamplerEngine::handleMidi (const juce::MidiMessage& m)
 void SamplerEngine::noteOn (int ch, int note, int vel)
 {
     note = juce::jlimit (0, 127, note + settings.transpose.load());
+    const int es = settings.editSample.load();
+    if (es >= 0 && es < mem.samples.size())
+    {
+        rawProgram->resolved[0][0] = mem.samples.getObjectPointer (es);
+        fmt::PartData def;
+        def.fxChannel = 0;   // dry, like monitoring the raw sample
+        triggerProgram (rawProgram.get(), VoicePart::from (def), -1, ch, note, vel);
+        return;
+    }
+
     const int ep = settings.editProgram.load();
     if (ep >= 0 && ep < mem.programs.size())
     {
