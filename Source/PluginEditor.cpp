@@ -52,17 +52,34 @@ void OledDisplay::mouseDown (const juce::MouseEvent& e)
 {
     // touching a soft-key box on the screen works like pressing the key next to it
     const auto r = getLocalBounds().toFloat();
+    pageHasMouse = pages.mouseDown (e.position, e.getNumberOfClicks(), e.mods.isShiftDown());
+    if (pageHasMouse) return;
     const float x = e.position.x, y = e.position.y;
     const int row = juce::jlimit (0, 7, (int) std::round ((y - geo::rowY (r, 0)) / layout::keyPitch));
     if (x < geo::boxW + 8.0f) pages.press (row);
     else if (x > r.getWidth() - geo::boxW - 8.0f) pages.press (8 + row);
 }
 
-void OledDisplay::mouseWheelMove (const juce::MouseEvent&, const juce::MouseWheelDetails& w)
+void OledDisplay::mouseDrag (const juce::MouseEvent& e)
+{
+    if (pageHasMouse) pages.mouseDrag (e.position);
+}
+
+void OledDisplay::mouseUp (const juce::MouseEvent& e)
+{
+    if (pageHasMouse) pages.mouseUp (e.position);
+    pageHasMouse = false;
+}
+
+void OledDisplay::mouseWheelMove (const juce::MouseEvent& e, const juce::MouseWheelDetails& w)
 {
     wheelAccum += (w.isReversed ? -w.deltaY : w.deltaY) * 8.0f;
     const int steps = (int) wheelAccum;
-    if (steps != 0) { wheelAccum -= (float) steps; pages.wheel (steps); }
+    if (steps != 0)
+    {
+        wheelAccum -= (float) steps;
+        if (! pages.mouseWheel (e.position, steps)) pages.wheel (steps);
+    }
 }
 
 //==============================================================================

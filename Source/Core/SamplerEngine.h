@@ -100,6 +100,15 @@ public:
     bool isAuditioning() const { return auditionActive.load(); }
     juce::int64 getAuditionPosition() const { return (juce::int64) auditionPosAtomic.load(); }
 
+    /** EDIT SAMPLE: the waveform shows a play line for every voice playing this sample (MIDI keyboard) */
+    void setWatchedSample (const Sample* s) { watchedSample = s; }
+    int getWatchedPositions (juce::int64* out, int maxCount) const
+    {
+        const int n = juce::jmin (maxCount, watchCount.load());
+        for (int i = 0; i < n; ++i) out[i] = (juce::int64) watchPos[(size_t) i].load();
+        return n;
+    }
+
     int getActiveVoiceCount() const { return activeVoices.load(); }
     bool getAndClearMidiActivity() { return midiActivity.exchange (false); }
 
@@ -128,6 +137,10 @@ private:
 
     // audition
     Sample::Ptr auditionSample, pendingAudition;
+    Sample::Ptr auditionHold, auditionHoldPrev;                          // message thread keeps the last reference (no frees on the audio thread)
+    std::atomic<const Sample*> watchedSample { nullptr };
+    std::array<std::atomic<float>, 8> watchPos {};
+    std::atomic<int> watchCount { 0 };
     std::atomic<bool> auditionPending { false }, auditionActive { false };
     juce::SpinLock auditionLock;
     double auditionPos = 0, auditionEnd = 0, auditionLoopStart = -1;

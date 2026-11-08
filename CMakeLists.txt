@@ -3,7 +3,7 @@
 #   cmake -B build -DJUCE_DIR=/path/to/JUCE  [-DAAX_SDK=/path/to/aax-sdk]
 #   cmake --build build --config Release
 cmake_minimum_required (VERSION 3.22)
-project (S6000 VERSION 2.14.0)
+project (S6000 VERSION 2.14.1)
 
 set (CMAKE_CXX_STANDARD 17)
 set (JUCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../JUCE" CACHE PATH "Path to JUCE 8")
@@ -63,7 +63,8 @@ target_sources (S6000 PRIVATE
     Source/UI/Pages/SamplePages.cpp
     Source/UI/Pages/SavePage.cpp
     Source/UI/Pages/UtilityPages.cpp
-    Source/UI/Popups.cpp)
+    Source/UI/Popups.cpp
+    Source/UI/WaveView.cpp)
 
 target_compile_definitions (S6000 PUBLIC
     JUCE_STRICT_REFCOUNTEDPOINTER=1

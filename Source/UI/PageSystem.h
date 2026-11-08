@@ -67,7 +67,7 @@ struct SoftKey
     bool enabled = true;
     int icon = 0;                 // rows: 0 none 1 folder 2 multi 3 program 4 sample 5 disk 6 image
     ParamPtr windowA, windowB;    // optional WINDOW parameters
-    juce::String windowTitle;
+    juce::String windowTitle, windowLabelA, windowLabelB;
 };
 using Keys = std::array<SoftKey, 16>;
 
@@ -87,6 +87,7 @@ struct Ctx
     int curProgram = 0, curKeygroup = 0, curZone = 0, curSample = 0, curPart = 0, partScroll = 0;
     bool editPartMode = false;
     int sampleMonitor = 0;      // EDIT SAMPLE > MONITOR : 0 RAW SAMPLE, 1 PROGRAM
+    int waveLog = 1;            // EDIT SAMPLE > SAMPLE TOOLS > W/FORM : 1 LOG, 0 LIN
 
     Multi* multi() const;
     fmt::PartData* part() const;
@@ -133,6 +134,16 @@ public:
     virtual bool textInput (juce::juce_wchar) { return false; }
     virtual bool isPopup() const { return false; }
     virtual juce::Rectangle<float> popupBounds (juce::Rectangle<float> lcd) const { return lcd; }
+
+    /** drawing outside the centre area (e.g. full width waveforms), before the soft keys */
+    virtual void paintFull (juce::Graphics&, juce::Rectangle<float> /*lcd*/) {}
+    /** true while something moves on screen (play line): the display repaints at ~30 fps */
+    virtual bool wantsAnimation() { return false; }
+    /** touch / mouse on the screen (LCD coordinates). Return true when handled. */
+    virtual bool mouseDown (juce::Point<float>, int /*clicks*/, bool /*shift*/) { return false; }
+    virtual void mouseDrag (juce::Point<float>) {}
+    virtual void mouseUp (juce::Point<float>) {}
+    virtual bool mouseWheel (juce::Point<float>, int /*delta*/) { return false; }
 
     Ctx& ctx;
     const PageId id;
@@ -191,6 +202,13 @@ public:
     void userKey (int index, bool store);
     bool textInput (juce::juce_wchar c);
 
+    // touch screen / mouse (LCD coordinates)
+    bool mouseDown (juce::Point<float> p, int clicks, bool shift);
+    void mouseDrag (juce::Point<float> p);
+    void mouseUp (juce::Point<float> p);
+    bool mouseWheel (juce::Point<float> p, int delta);
+    bool animating();
+
     void refresh();
     bool tick();                     // ~20 Hz from the editor
     void paint (juce::Graphics& g, juce::Rectangle<float> lcd);
@@ -210,6 +228,7 @@ private:
     std::vector<std::unique_ptr<Page>> pages;
     std::vector<std::unique_ptr<Page>> popups;
     Page* currentPage = nullptr;
+    Page* mousePage = nullptr;
     bool powered = true, booting = false;
 
     void paintKeys (juce::Graphics& g, juce::Rectangle<float> lcd, Page& p, bool dim, const Keys* mask = nullptr);

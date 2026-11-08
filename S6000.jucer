@@ -7,7 +7,7 @@
 -->
 <JUCERPROJECT id="S6kDmH" name="S6000" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="0" jucerFormatVersion="1"
-              version="2.14.0" companyName="dominikHop" companyCopyright="(c) dominikHop"
+              version="2.14.1" companyName="dominikHop" companyCopyright="(c) dominikHop"
               companyWebsite="https://www.instagram.com/dominikhop" companyEmail=""
               bundleIdentifier="com.dominikhop.s6000" cppLanguageStandard="17"
               pluginFormats="buildAAX,buildAU,buildStandalone,buildVST3"
@@ -66,6 +66,8 @@
         <FILE id="c4f445" name="PageSystem.h" compile="0" resource="0" file="Source/UI/PageSystem.h"/>
         <FILE id="baa6f8" name="Popups.cpp" compile="1" resource="0" file="Source/UI/Popups.cpp"/>
         <FILE id="8c5216" name="Popups.h" compile="0" resource="0" file="Source/UI/Popups.h"/>
+        <FILE id="w4v3c1" name="WaveView.cpp" compile="1" resource="0" file="Source/UI/WaveView.cpp"/>
+        <FILE id="w4v3h1" name="WaveView.h" compile="0" resource="0" file="Source/UI/WaveView.h"/>
         <FILE id="4544e2" name="Theme.h" compile="0" resource="0" file="Source/UI/Theme.h"/>
       </GROUP>
       <FILE id="a58928" name="PluginEditor.cpp" compile="1" resource="0" file="Source/PluginEditor.cpp"/>

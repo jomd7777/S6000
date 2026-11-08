@@ -65,6 +65,8 @@ void SamplerEngine::allNotesOff()
 void SamplerEngine::audition (Sample::Ptr s, bool loopRegionOnly, juce::int64 from, juce::int64 to)
 {
     const juce::SpinLock::ScopedLockType sl (auditionLock);
+    auditionHoldPrev = auditionHold;
+    auditionHold = s;
     pendingAudition = s;
     if (s != nullptr)
     {
@@ -109,8 +111,16 @@ void SamplerEngine::render (juce::AudioBuffer<float>& outBus, juce::AudioBuffer<
 
     renderAudition (outBus, numSamples);
 
-    int n = 0;
-    for (auto& v : voices) if (v.active) ++n;
+    int n = 0, w = 0;
+    const Sample* watched = watchedSample.load();
+    for (auto& v : voices)
+        if (v.active)
+        {
+            ++n;
+            if (watched != nullptr && w < (int) watchPos.size() && v.sample.get() == watched && v.fadeOut < 0.0f)
+                watchPos[(size_t) w++] = (float) v.pos;
+        }
+    watchCount = w;
     activeVoices = n;
     globalTime += numSamples / sr;
 }

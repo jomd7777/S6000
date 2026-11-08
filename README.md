@@ -31,7 +31,7 @@ S5000/S6000 Operator's Manual, so if you know the hardware you already know this
 | **LOAD** | Browse folders and disk images, load multis / programs / samples / whole folders, audition samples, DISK LIST, mount images, drag & drop files |
 | **MULTI** | 128 parts (MIDI 1A–16B), level, pan, output, FX send, tuning, key range, mute / solo, EDIT PART |
 | **EDIT PROGRAM** | Output, MIDI/Tune (tuning templates), Pitchbend, LFO 1 & 2, Keygroups, **4 velocity zones**, Keyspan, Filter (26 types), Amp / Filter / Aux envelopes, APM modulation |
-| **EDIT SAMPLE** | Master, Trim, Chop (creates a drum program), Loop (splice view, auto-find, crossfade), Join, Mix, Fade, Time-stretch, Pitch-shift, BPM match, Re-sample, EQ — with **UNDO** |
+| **EDIT SAMPLE** | Master, Trim, Chop (extract / erase / cut, slices → drum program), Loop (End→\|←Start splice view, auto-find, crossfade, loop lock), Join, Mix, Make Stereo, Fade up/down (LINEAR / LOG / SINE), Time-stretch & Pitch-shift (54 presets), BPM match, Re-sample (quality + bit depth), 3-band EQ with response curve. Waveform with overview + zoom, LOG/LIN, START..END highlight, animated play line and PLAY/STOP status; drag the edit points with the mouse. Every process ends with the original *PLAY / KEEP ORIGINAL / NEW / BOTH / OVERWRITE* prompt, plus **UNDO** |
 | **RECORD** | Threshold / MIDI / one-key trigger, mono or stereo, record from the input or re-sample the main outs |
 | **FX** | EB20: Distortion/Ring-mod → EQ → Chorus/Flange/Phaser/Rotary/Pitch → Delay → Reverb, plus RV3/RV4 |
 | **SAVE** | Save multis, programs and samples as **.AKM / .AKP / .WAV** (S5000/S6000 format) |

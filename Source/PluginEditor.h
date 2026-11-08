@@ -18,6 +18,8 @@ public:
     OledDisplay (s6k::ui::PageManager& pm, S6000AudioProcessor& p) : pages (pm), proc (p) { setOpaque (true); }
     void paint (juce::Graphics& g) override;
     void mouseDown (const juce::MouseEvent& e) override;
+    void mouseDrag (const juce::MouseEvent& e) override;
+    void mouseUp (const juce::MouseEvent& e) override;
     void mouseWheelMove (const juce::MouseEvent& e, const juce::MouseWheelDetails& w) override;
     bool sleeping = false;
 
@@ -25,6 +27,21 @@ private:
     s6k::ui::PageManager& pages;
     S6000AudioProcessor& proc;
     float wheelAccum = 0;
+    bool pageHasMouse = false;
+    double lastFrameMs = 0;
+    bool wasAnimating = false;
+    // smooth play line: repaint at ~30 fps only while a page animates (CPU friendly)
+    juce::VBlankAttachment vblank { this, [this]
+    {
+        if (sleeping || ! isShowing()) return;
+        const bool anim = pages.animating();
+        if (! anim && ! wasAnimating) return;
+        const double now = juce::Time::getMillisecondCounterHiRes();
+        if (anim && now - lastFrameMs < 32.0) return;
+        lastFrameMs = now;
+        wasAnimating = anim;
+        repaint();
+    } };
 };
 
 //==============================================================================

@@ -185,6 +185,7 @@ void PageManager::show (PageId id)
 {
     auto* p = get (id);
     if (p == nullptr) return;
+    mousePage = nullptr;
     popups.clear();
     if (currentPage != nullptr && currentPage != p) currentPage->onHide();
     currentPage = p;
@@ -346,7 +347,7 @@ void PageManager::window()
         if (k.windowA != nullptr)
         {
             pushPopup (std::make_unique<WindowPopup> (ctx, k.windowTitle.isNotEmpty() ? k.windowTitle : k.title,
-                                                      k.windowA, k.windowB, "", ""));
+                                                      k.windowA, k.windowB, k.windowLabelA, k.windowLabelB));
             return;
         }
         if (k.param != nullptr)
@@ -394,6 +395,42 @@ bool PageManager::textInput (juce::juce_wchar c)
     if (auto* p = top())
         if (p->textInput (c)) { refresh(); return true; }
     return false;
+}
+
+bool PageManager::mouseDown (juce::Point<float> p, int clicks, bool shift)
+{
+    mousePage = nullptr;
+    if (! powered || booting) return false;
+    if (auto* t = top())
+        if (t->mouseDown (p, clicks, shift)) { mousePage = t; refresh(); return true; }
+    return false;
+}
+
+void PageManager::mouseDrag (juce::Point<float> p)
+{
+    if (mousePage != nullptr && mousePage == top()) { mousePage->mouseDrag (p); refresh(); }
+}
+
+void PageManager::mouseUp (juce::Point<float> p)
+{
+    if (mousePage != nullptr && mousePage == top()) { mousePage->mouseUp (p); refresh(); }
+    mousePage = nullptr;
+}
+
+bool PageManager::mouseWheel (juce::Point<float> p, int delta)
+{
+    if (! powered || booting) return false;
+    if (auto* t = top())
+        if (t->mouseWheel (p, delta)) { refresh(); return true; }
+    return false;
+}
+
+bool PageManager::animating()
+{
+    if (! powered || booting) return false;
+    bool any = currentPage != nullptr && currentPage->wantsAnimation();
+    for (auto& p : popups) any = p->wantsAnimation() || any;
+    return any;
 }
 
 bool PageManager::tick()
@@ -456,7 +493,14 @@ void PageManager::paintKeys (juce::Graphics& g, juce::Rectangle<float> lcd, Page
 
         if (k.kind == SoftKey::Kind::Header)
         {
-            const auto r = geo::headerBox (lcd);
+            // two headers (JOIN / MIX: sample A on F1, sample B on F9) split the top line
+            auto r = geo::headerBox (lcd);
+            if (p.keys[8].kind == SoftKey::Kind::Header)
+            {
+                const float mid = lcd.getCentreX();
+                r = i == 8 ? juce::Rectangle<float> (mid + 4.0f, r.getY(), lcd.getRight() - geo::margin - mid - 4.0f, r.getHeight())
+                           : r.withRight (mid - 4.0f);
+            }
             g.setColour (col);
             g.fillRect (r);
             const auto txt = k.param != nullptr ? k.param->text() : k.title;
@@ -553,6 +597,7 @@ void PageManager::paint (juce::Graphics& g, juce::Rectangle<float> lcd)
             const auto c = geo::centre (lcd);
             p.paintCentre (g, c);
         }
+        p.paintFull (g, lcd);
     }
     paintKeys (g, lcd, p, dimBase, popups.empty() ? nullptr : &popups.front()->keys);
 

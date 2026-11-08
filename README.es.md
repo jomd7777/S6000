@@ -69,9 +69,13 @@ No soportado: volúmenes HFS de Mac (conviértelos a ISO) y DMG con bzip2/LZFSE
   LFO 1, LFO 2, KEYGROUP, **ZONES** (4 capas por velocidad), KEYSPAN, KG PITCH/AMP, **FILTER (26 tipos)**,
   AMP ENVELOPE, FILTER ENVELOPE, AUX ENVELOPE, modulación **APM** (toca dos veces: cantidad ↔ fuente),
   GOTO SOURCE / GOTO DEST, PROG TOOLS, CREATE PROG.
-* **EDIT SAMPLE**: MASTER, TRIM, CHOP (crea samples y programa), LOOP (vista de empalme, AUTO FIND,
-  CROSSFADE), JOIN, MIX, FADE UP/DOWN, TIME STRETCH, PITCH SHIFT, BPM MATCH, RE‑SAMPLE, EQ,
-  COPY SAMPLE, SAMPLE TOOLS, SAMPLE LIST. **UNDO** deshace la última edición (otra vez = rehacer).
+* **EDIT SAMPLE** (manual p.141‑177): MASTER, TRIM, CHOP (EXTRACT / ERASE / CUT, slices → programa),
+  LOOP (vista End→|←Start, AUTO FIND, CROSSFADE, LOOP LOCK), JOIN, MIX, MAKE STEREO, FADE UP/DOWN
+  (LINEAR / LOG / SINE), TIME STRETCH y PITCH SHIFT (54 presets), BPM MATCH, RE‑SAMPLE (calidad y bits),
+  EQ de 3 bandas con curva, COPY SAMPLE, SAMPLE TOOLS (W/FORM LOG/LIN), SAMPLE LIST.
+  Forma de onda con vista general + zoom, resaltado entre START y END, línea de PLAY blanca animada
+  e indicador PLAY/STOP; los puntos se arrastran con el ratón (rueda = zoom, doble clic = todo).
+  Cada proceso termina con PLAY / KEEP ORIGINAL / NEW / BOTH / OVERWRITE + RENAME. **UNDO** deshace.
 * **RECORD**: nivel, disparo (ONE KEY / THRESHOLD / MIDI NOTE), fuente (entrada o MAIN OUTS),
   longitud, nota original, mono/estéreo, ARM, medidores, KEEP / DISCARD / PLAY.
 * **FX** (EB20): MULTIFX 1 y 2 (RING MOD/DIST → EQ → MOD → DELAY → REVERB → OUTPUT MIX),
