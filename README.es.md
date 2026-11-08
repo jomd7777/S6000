@@ -2,6 +2,8 @@
 
 **Creador: © dominikHop — [www.instagram.com/dominikhop](https://www.instagram.com/dominikhop)**
 
+![S6000 — panel frontal arrancando OS Ver. 2.14](docs/screenshot.png)
+
 Plugin **AU / VST3 / AAX / Standalone** hecho con **JUCE 8** (Projucer o CMake).
 El panel reproduce el S6000: chasis color crema, display tipo **OLED** (texto de 10–12 pt),
 16 teclas **F1–F16**, rueda **DATA**, teclado numérico, **WINDOW / UNDO / EXIT / ENT‑PLAY**,

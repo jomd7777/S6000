@@ -8,6 +8,8 @@ S5000/S6000 Operator's Manual, so if you know the hardware you already know this
 
 > *Leer en español: [README.es.md](README.es.md)*
 
+![S6000 plug-in — front panel booting OS Ver. 2.14](docs/screenshot.png)
+
 ---
 
 ## Highlights
