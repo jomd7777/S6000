@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  AKAI S6000 style sampler - OS Ver. 2.14 emulation
+  AU / VST3 / AAX / Standalone  -  JUCE 8
+  (c) dominikHop  -  www.instagram.com/dominikhop
+-->
+<JUCERPROJECT id="S6kDmH" name="S6000" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="0" jucerFormatVersion="1"
+              version="2.14.0" companyName="dominikHop" companyCopyright="(c) dominikHop"
+              companyWebsite="https://www.instagram.com/dominikhop" companyEmail=""
+              bundleIdentifier="com.dominikhop.s6000" cppLanguageStandard="17"
+              pluginFormats="buildAAX,buildAU,buildStandalone,buildVST3"
+              pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
+              pluginName="S6000" pluginDesc="AKAI S6000 style stereo digital sampler - OS 2.14"
+              pluginManufacturer="dominikHop" pluginManufacturerCode="Dmhp" pluginCode="S6k0"
+              pluginVST3Category="Instrument,Sampler" pluginAUMainType="'aumu'"
+              pluginAAXCategory="AAX_ePlugInCategory_SWGenerators" aaxIdentifier="com.dominikhop.s6000"
+              pluginAUExportPrefix="S6000AU" pluginVSTNumMidiInputs="16"
+              defines="">
+  <MAINGROUP id="S6kMgr" name="S6000">
+    <GROUP id="c1dc6f" name="Source">
+      <GROUP id="eb4280" name="Core">
+        <FILE id="1691fd" name="DiskManager.cpp" compile="1" resource="0" file="Source/Core/DiskManager.cpp"/>
+        <FILE id="d51ccf" name="DiskManager.h" compile="0" resource="0" file="Source/Core/DiskManager.h"/>
+        <FILE id="59e4fe" name="Dsp.h" compile="0" resource="0" file="Source/Core/Dsp.h"/>
+        <FILE id="79ee61" name="EffectsEngine.cpp" compile="1" resource="0" file="Source/Core/EffectsEngine.cpp"/>
+        <FILE id="07baa5" name="EffectsEngine.h" compile="0" resource="0" file="Source/Core/EffectsEngine.h"/>
+        <FILE id="a8ceb1" name="Model.cpp" compile="1" resource="0" file="Source/Core/Model.cpp"/>
+        <FILE id="0fbd34" name="Model.h" compile="0" resource="0" file="Source/Core/Model.h"/>
+        <FILE id="eb4308" name="Recorder.h" compile="0" resource="0" file="Source/Core/Recorder.h"/>
+        <FILE id="590668" name="SampleOps.cpp" compile="1" resource="0" file="Source/Core/SampleOps.cpp"/>
+        <FILE id="800df2" name="SampleOps.h" compile="0" resource="0" file="Source/Core/SampleOps.h"/>
+        <FILE id="a36f37" name="SamplerEngine.cpp" compile="1" resource="0" file="Source/Core/SamplerEngine.cpp"/>
+        <FILE id="9021f1" name="SamplerEngine.h" compile="0" resource="0" file="Source/Core/SamplerEngine.h"/>
+        <FILE id="d7eb88" name="VoiceFilter.cpp" compile="1" resource="0" file="Source/Core/VoiceFilter.cpp"/>
+        <FILE id="2f07cf" name="VoiceFilter.h" compile="0" resource="0" file="Source/Core/VoiceFilter.h"/>
+      </GROUP>
+      <GROUP id="4533bc" name="Disk">
+        <FILE id="21c8a7" name="AkaiFs.cpp" compile="1" resource="0" file="Source/Disk/AkaiFs.cpp"/>
+        <FILE id="07efff" name="DiskDevice.cpp" compile="1" resource="0" file="Source/Disk/DiskDevice.cpp"/>
+        <FILE id="f4fbab" name="DiskDevice.h" compile="0" resource="0" file="Source/Disk/DiskDevice.h"/>
+        <FILE id="8a5ded" name="DmgReader.cpp" compile="1" resource="0" file="Source/Disk/DmgReader.cpp"/>
+        <FILE id="6a34ae" name="FatFs.cpp" compile="1" resource="0" file="Source/Disk/FatFs.cpp"/>
+        <FILE id="849b26" name="Iso9660.cpp" compile="1" resource="0" file="Source/Disk/Iso9660.cpp"/>
+      </GROUP>
+      <GROUP id="2cafa8" name="Formats">
+        <FILE id="e90aa7" name="AkaiFormats.cpp" compile="1" resource="0" file="Source/Formats/AkaiFormats.cpp"/>
+        <FILE id="442b35" name="AkaiFormats.h" compile="0" resource="0" file="Source/Formats/AkaiFormats.h"/>
+      </GROUP>
+      <GROUP id="008209" name="UI">
+        <GROUP id="ee5f2d" name="Pages">
+          <FILE id="ff29cc" name="Common.h" compile="0" resource="0" file="Source/UI/Pages/Common.h"/>
+          <FILE id="f7a5b7" name="FxPages.cpp" compile="1" resource="0" file="Source/UI/Pages/FxPages.cpp"/>
+          <FILE id="c8e177" name="LoadPages.cpp" compile="1" resource="0" file="Source/UI/Pages/LoadPages.cpp"/>
+          <FILE id="f91cad" name="MultiPages.cpp" compile="1" resource="0" file="Source/UI/Pages/MultiPages.cpp"/>
+          <FILE id="eceeac" name="ProgramPages.cpp" compile="1" resource="0" file="Source/UI/Pages/ProgramPages.cpp"/>
+          <FILE id="27c151" name="RecordPage.cpp" compile="1" resource="0" file="Source/UI/Pages/RecordPage.cpp"/>
+          <FILE id="15de30" name="SamplePages.cpp" compile="1" resource="0" file="Source/UI/Pages/SamplePages.cpp"/>
+          <FILE id="bca221" name="SavePage.cpp" compile="1" resource="0" file="Source/UI/Pages/SavePage.cpp"/>
+          <FILE id="1e3b09" name="UtilityPages.cpp" compile="1" resource="0" file="Source/UI/Pages/UtilityPages.cpp"/>
+        </GROUP>
+        <FILE id="e249f8" name="Controls.cpp" compile="1" resource="0" file="Source/UI/Controls.cpp"/>
+        <FILE id="a86824" name="Controls.h" compile="0" resource="0" file="Source/UI/Controls.h"/>
+        <FILE id="3d76cb" name="PageSystem.cpp" compile="1" resource="0" file="Source/UI/PageSystem.cpp"/>
+        <FILE id="c4f445" name="PageSystem.h" compile="0" resource="0" file="Source/UI/PageSystem.h"/>
+        <FILE id="baa6f8" name="Popups.cpp" compile="1" resource="0" file="Source/UI/Popups.cpp"/>
+        <FILE id="8c5216" name="Popups.h" compile="0" resource="0" file="Source/UI/Popups.h"/>
+        <FILE id="4544e2" name="Theme.h" compile="0" resource="0" file="Source/UI/Theme.h"/>
+      </GROUP>
+      <FILE id="a58928" name="PluginEditor.cpp" compile="1" resource="0" file="Source/PluginEditor.cpp"/>
+      <FILE id="f26b33" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="1e569f" name="PluginProcessor.cpp" compile="1" resource="0" file="Source/PluginProcessor.cpp"/>
+      <FILE id="2190cc" name="PluginProcessor.h" compile="0" resource="0" file="Source/PluginProcessor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0" JUCE_USE_FLAC="1"
+               JUCE_USE_OGGVORBIS="0" JUCE_USE_MP3AUDIOFORMAT="0" JUCE_WEB_BROWSER="0" JUCE_USE_CURL="0"
+               JUCE_DISPLAY_SPLASH_SCREEN="0"/>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX" hardenedRuntime="1" hardenedRuntimeOptions="com.apple.security.device.audio-input"
+               microphonePermissionNeeded="1" microphonePermissionsText="S6000 RECORD mode records from the audio input."
+               aaxFolder="../../SDKs/AAX">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="S6000" macOSDeploymentTarget="10.13"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="S6000" optimisation="3" linkTimeOptimisation="1"
+                       macOSDeploymentTarget="10.13" osxArchitecture="64BitUniversal"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <VS2022 targetFolder="Builds/VisualStudio2022" aaxFolder="..\..\SDKs\AAX">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="S6000"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="S6000" optimisation="3" linkTimeOptimisation="1"
+                       enablePluginBinaryCopyStep="0"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2022>
+    <LINUX_MAKE targetFolder="Builds/LinuxMakefile">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="S6000"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="S6000" optimisation="3" linkTimeOptimisation="1"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../JUCE/modules"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+</JUCERPROJECT>
