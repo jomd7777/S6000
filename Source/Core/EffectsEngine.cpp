@@ -1,7 +1,7 @@
 /*
   ==============================================================================
    S6000 Emulation - EB20 effects
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #include "EffectsEngine.h"

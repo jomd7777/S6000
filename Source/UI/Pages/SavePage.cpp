@@ -3,7 +3,7 @@
    S6000 Emulation - SAVE mode (manual p.216-218)
      VIEW MEMORY / VIEW DISK, SAVE MULTI / PROGRAM / SAMPLE, SAVE ALL,
      OPEN / CLOSE / NEW FOLDER.  Files: .AKM .AKP .WAV (S5000/S6000 format)
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #include "Common.h"

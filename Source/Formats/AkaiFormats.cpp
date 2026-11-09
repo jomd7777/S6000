@@ -1,7 +1,7 @@
 /*
   ==============================================================================
    S6000 Emulation - Akai file formats
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #include "AkaiFormats.h"

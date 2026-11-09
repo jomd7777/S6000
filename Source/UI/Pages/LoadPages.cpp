@@ -5,7 +5,7 @@
      GET INFO, OPEN / CLOSE FOLDER, DISK LIST (select / update / mount), DISK TOOLS
      Reads: host folders, .iso .img .dmg .bin .cdr .hds .toast, FAT, ISO9660,
             Akai S1000/S3000 partitions + floppies, S5000/S6000 AKP/AKM/WAV
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #include "Common.h"

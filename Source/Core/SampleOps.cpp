@@ -1,7 +1,7 @@
 /*
   ==============================================================================
    S6000 Emulation - offline sample editing
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #include "SampleOps.h"

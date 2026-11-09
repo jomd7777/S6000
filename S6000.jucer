@@ -3,12 +3,12 @@
 <!--
   AKAI S6000 style sampler - OS Ver. 2.14 emulation
   AU / VST3 / AAX / Standalone  -  JUCE 8
-  (c) dominikHop  -  www.instagram.com/dominikhop
+  (c) dominikHop  -  www.instagram.com/dominkhop
 -->
 <JUCERPROJECT id="S6kDmH" name="S6000" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="0" jucerFormatVersion="1"
               version="2.14.1" companyName="dominikHop" companyCopyright="(c) dominikHop"
-              companyWebsite="https://www.instagram.com/dominikhop" companyEmail=""
+              companyWebsite="https://www.instagram.com/dominkhop" companyEmail=""
               bundleIdentifier="com.dominikhop.s6000" cppLanguageStandard="17"
               pluginFormats="buildAAX,buildAU,buildStandalone,buildVST3"
               pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"

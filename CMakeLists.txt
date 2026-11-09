@@ -18,7 +18,7 @@ endif()
 juce_add_plugin (S6000
     COMPANY_NAME "dominikHop"
     COMPANY_COPYRIGHT "(c) dominikHop"
-    COMPANY_WEBSITE "https://www.instagram.com/dominikhop"
+    COMPANY_WEBSITE "https://www.instagram.com/dominkhop"
     BUNDLE_ID com.dominikhop.s6000
     PRODUCT_NAME "S6000"
     DESCRIPTION "AKAI S6000 style stereo digital sampler - OS 2.14"

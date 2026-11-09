@@ -1,7 +1,7 @@
 /*
   ==============================================================================
    AKAI S6000 style sampler  -  processor
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #include "PluginProcessor.h"

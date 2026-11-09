@@ -8,7 +8,7 @@
    akaiutil / akaitools.  Every file read is validated against its header;
    if a FAT chain looks inconsistent the reader falls back to contiguous
    blocks (library CD-ROMs are written sequentially).
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #include "DiskDevice.h"

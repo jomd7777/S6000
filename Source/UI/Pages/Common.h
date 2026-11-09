@@ -1,7 +1,7 @@
 /*
   ==============================================================================
    S6000 Emulation - helpers shared by all pages
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #pragma once

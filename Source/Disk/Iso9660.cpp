@@ -2,7 +2,7 @@
   ==============================================================================
    S6000 Emulation - ISO9660 / Joliet CD-ROM reader
    (S5000/S6000 library CDs, .iso images, raw .bin via RawCdDevice)
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #include "DiskDevice.h"

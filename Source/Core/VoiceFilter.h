@@ -1,7 +1,7 @@
 /*
   ==============================================================================
    S6000 Emulation - per-voice resonant filter, 26 types (FILTER page)
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #pragma once

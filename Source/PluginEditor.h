@@ -1,7 +1,7 @@
 /*
   ==============================================================================
    AKAI S6000 style sampler  -  editor (front panel)
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #pragma once
@@ -64,7 +64,7 @@ public:
     juce::Slider mainVolume, phonesLevel;
     s6k::ui::PowerButton power;
     juce::Label credit;
-    juce::HyperlinkButton instagram { "www.instagram.com/dominikhop", juce::URL ("https://www.instagram.com/dominikhop") };
+    juce::HyperlinkButton instagram { "www.instagram.com/dominkhop", juce::URL ("https://www.instagram.com/dominkhop") };
     juce::TextButton zoomOut { "-" }, zoomIn { "+" }, zoomLabel { "100%" };
 
 private:

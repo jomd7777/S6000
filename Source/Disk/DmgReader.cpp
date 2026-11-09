@@ -4,7 +4,7 @@
    Supports chunk types: zero-fill, raw, ignore, ADC, zlib (UDZO).
    bzip2 (UDBZ) / LZFSE (ULFO) / LZMA images report an error suggesting
    "hdiutil convert in.dmg -format UDRW -o out.dmg".
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #include "DiskDevice.h"

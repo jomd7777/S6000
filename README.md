@@ -1,6 +1,6 @@
 # S6000 — AKAI S6000 Sampler Emulation (OS Ver. 2.14)
 
-**Created by © dominikHop** — [instagram.com/dominikhop](https://www.instagram.com/dominikhop) · [github.com/jomd7777](https://github.com/jomd7777)
+**Created by © dominikHop** — [instagram.com/dominkhop](https://www.instagram.com/dominkhop) · [github.com/jomd7777](https://github.com/jomd7777)
 
 A software recreation of the legendary **AKAI S6000 stereo digital sampler**, built with **JUCE 8** as an
 **AU / VST3 / AAX / Standalone** plug-in. The front panel, the pages and the workflow follow the original

@@ -1,7 +1,7 @@
 /*
   ==============================================================================
    S6000 Emulation - In-memory data model (MULTIs, PROGRAMs, SAMPLEs, FX)
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #pragma once

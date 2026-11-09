@@ -4,7 +4,7 @@
      128 parts, program assignment, PART LEVEL / OUTPUT / EFFECTS SEND /
      FINE TUNE / MIDI CHANNEL with WINDOW functions, EDIT PART, PART & MULTI TOOLS,
      MULTI LIST, PROGRAM LIST
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #include "Common.h"

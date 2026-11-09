@@ -7,7 +7,7 @@
      * 128 part multi, 1A..16B channel mapping, mute groups, FX sends
    CPU strategy: modulation is computed at control rate (every 32 samples),
    idle voices cost nothing, filters bypass when fully open.
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #pragma once

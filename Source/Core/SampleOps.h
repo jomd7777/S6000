@@ -3,7 +3,7 @@
    S6000 Emulation - offline sample editing (EDIT SAMPLE functions)
    MASTER, TRIM, CHOP, LOOP, JOIN, MIX, FADE UP/DOWN, TIMESTRETCH,
    PITCH SHIFT, BPM MATCH, RE-SAMPLE, EQ
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #pragma once

@@ -3,7 +3,7 @@
    S6000 Emulation - Akai file formats (pure C++17)
      * S1000 / S3000 samples and programs (from Akai disks / CD-ROMs)
      * S5000 / S6000 .AKP programs and .AKM multis (RIFF based)
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #pragma once

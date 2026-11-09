@@ -1,7 +1,7 @@
 /*
   ==============================================================================
    S6000 Emulation - reusable pop-up windows
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #pragma once

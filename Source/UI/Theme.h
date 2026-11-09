@@ -1,7 +1,7 @@
 /*
   ==============================================================================
    S6000 Emulation - colours, fonts and the panel layout (base size 1200 x 640)
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #pragma once

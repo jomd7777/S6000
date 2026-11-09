@@ -1,7 +1,7 @@
 /*
   ==============================================================================
    S6000 Emulation - RECORD mode sampler (audio thread side is lock free)
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #pragma once

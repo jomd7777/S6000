@@ -3,7 +3,7 @@
    S6000 Emulation - UTILITIES (manual p.219-241)
      SYSTEM SETUP, SET CLOCK, PREFERENCES, MIDI SETUP, MIDI FILTER, FX IN/OUTS,
      DISK UTILS, MEMORY TEST, SHOW HARDWARE, SET PLAY KEY, TEST TONE, SAVE O/S
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #include "Common.h"

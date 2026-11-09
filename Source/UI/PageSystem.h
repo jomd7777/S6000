@@ -4,7 +4,7 @@
      Every screen is a Page that fills the 16 soft keys (F1..F16).
      Touch a key = select / execute, turn the DATA wheel = tweak.
      Pop-ups (tools menus, prompts, naming, windows) stack on top.
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #pragma once

@@ -2,7 +2,7 @@
   ==============================================================================
    S6000 Emulation - FAT12 / FAT16 / FAT32 reader (with long file names)
    The S5000/S6000 formats floppies, Zip/Jaz and hard disks as DOS FAT.
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #include "DiskDevice.h"

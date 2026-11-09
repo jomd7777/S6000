@@ -1,7 +1,7 @@
 /*
   ==============================================================================
    S6000 Emulation - per-voice resonant filter, 26 types
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #include "VoiceFilter.h"

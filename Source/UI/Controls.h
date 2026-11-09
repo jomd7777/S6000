@@ -1,7 +1,7 @@
 /*
   ==============================================================================
    S6000 Emulation - physical panel controls (painted, no bitmaps)
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #pragma once

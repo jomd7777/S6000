@@ -1,6 +1,6 @@
 # S6000 — emulación del sampler AKAI S6000 (OS Ver. 2.14)
 
-**Creador: © dominikHop — [www.instagram.com/dominikhop](https://www.instagram.com/dominikhop)**
+**Creador: © dominikHop — [www.instagram.com/dominkhop](https://www.instagram.com/dominkhop)**
 
 ![S6000 — panel frontal arrancando OS Ver. 2.14](docs/screenshot.png)
 

@@ -1,7 +1,7 @@
 /*
   ==============================================================================
    S6000 Emulation - EDIT SAMPLE waveform display
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #include "WaveView.h"

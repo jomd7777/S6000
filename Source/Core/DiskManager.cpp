@@ -1,7 +1,7 @@
 /*
   ==============================================================================
    S6000 Emulation - Disk manager
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #include "DiskManager.h"

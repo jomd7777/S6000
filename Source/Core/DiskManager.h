@@ -5,7 +5,7 @@
      * mounting  : .iso .img .dmg .bin .cdr .hds .toast ... in a background thread
      * LOAD      : multis / programs / samples / folders (S1000, S3000, S5000, S6000)
      * SAVE      : .AKM / .AKP / .WAV (with loop + root note in the smpl chunk)
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #pragma once

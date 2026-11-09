@@ -1,7 +1,7 @@
 /*
   ==============================================================================
    S6000 Emulation - data model
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #include "Model.h"

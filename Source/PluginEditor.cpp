@@ -5,7 +5,7 @@
      * F1..F16 soft keys, DATA wheel, keypad, WINDOW / UNDO / EXIT / ENT-PLAY,
        USER KEYS, MARK / JUMP, mode keys with LEDs, MAIN VOLUME, PHONES LEVEL
      * POWER switch (lower left) with boot screen
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #include "PluginEditor.h"

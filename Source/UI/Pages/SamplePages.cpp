@@ -11,7 +11,7 @@
      PLAY / KEEP ORIGINAL / NEW / BOTH / OVERWRITE and RENAME prompt.
      The waveform can also be edited with the mouse: drag the edit points,
      wheel = zoom, double click = whole sample, click the overview = scroll.
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #include "Common.h"

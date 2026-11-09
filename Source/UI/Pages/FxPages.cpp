@@ -4,7 +4,7 @@
      MULTIFX 1/2 : RING MOD/DISTORTION, EQ, MODULATION, DELAY, REVERB, OUTPUT MIX
      RV3 / RV4   : reverb channels (input SEND / FX1 / FX2)
      EFFECTS TOOLS (templates), COPY FX
-   (c) dominikHop  -  www.instagram.com/dominikhop
+   (c) dominikHop  -  www.instagram.com/dominkhop
   ==============================================================================
 */
 #include "Common.h"
