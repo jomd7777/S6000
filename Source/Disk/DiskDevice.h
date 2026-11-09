@@ -1,7 +1,7 @@
 /*
   ==============================================================================
    S6000 Emulation  -  Disk layer (pure C++17, no JUCE dependency)
-   (c) dominikHop  -  www.instagram.com/dominkhop
+   (c) dominkHop  -  github.com/jomd7777/S6000
 
    Block devices + virtual file system used by the LOAD / SAVE pages.
    Supports:  host folders (via JUCE wrapper), CD-ROM .iso, raw 2352 .bin/.img,

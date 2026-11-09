@@ -6,7 +6,7 @@
                  + OUTPUT MIX (path / levels / width)
      RV3 / RV4 : reverb only, input from its send or from FX1 / FX2
    CPU: a channel only runs while it receives signal or its tail is ringing.
-   (c) dominikHop  -  www.instagram.com/dominkhop
+   (c) dominkHop  -  github.com/jomd7777/S6000
   ==============================================================================
 */
 #pragma once

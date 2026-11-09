@@ -1,7 +1,7 @@
 /*
   ==============================================================================
    AKAI S6000 style sampler  -  processor
-   (c) dominikHop  -  www.instagram.com/dominkhop
+   (c) dominkHop  -  github.com/jomd7777/S6000
   ==============================================================================
 */
 #include "PluginProcessor.h"
@@ -44,7 +44,7 @@ S6000AudioProcessor::S6000AudioProcessor()
     juce::PropertiesFile::Options o;
     o.applicationName = "S6000";
     o.filenameSuffix = ".settings";
-    o.folderName = juce::String ("dominikHop") + juce::File::getSeparatorString() + "S6000";
+    o.folderName = juce::String ("dominkHop") + juce::File::getSeparatorString() + "S6000";
     o.osxLibrarySubFolder = "Application Support";
     o.storageFormat = juce::PropertiesFile::storeAsXML;
     o.millisecondsBeforeSaving = 500;

@@ -16,7 +16,7 @@
 # S6000 v2.14.0 — first public release
 
 AKAI S6000 sampler emulation (OS Ver. 2.14) for macOS — **AU · VST3 · AAX · Standalone**.
-Created by **© dominikHop**.
+Created by **© dominkHop**.
 
 ## Downloads
 - `S6000-v2.14.0-macOS-AU.zip` — Audio Unit (Logic, GarageBand, Ableton, …)

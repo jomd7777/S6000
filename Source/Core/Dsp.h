@@ -1,7 +1,7 @@
 /*
   ==============================================================================
    S6000 Emulation - lightweight DSP building blocks (CPU friendly)
-   (c) dominikHop  -  www.instagram.com/dominkhop
+   (c) dominkHop  -  github.com/jomd7777/S6000
   ==============================================================================
 */
 #pragma once

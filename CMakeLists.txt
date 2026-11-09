@@ -1,4 +1,4 @@
-# AKAI S6000 style sampler - OS Ver. 2.14 emulation  (c) dominikHop
+# AKAI S6000 style sampler - OS Ver. 2.14 emulation  (c) dominkHop
 # Alternative to the Projucer project:
 #   cmake -B build -DJUCE_DIR=/path/to/JUCE  [-DAAX_SDK=/path/to/aax-sdk]
 #   cmake --build build --config Release
@@ -16,9 +16,9 @@ if (AAX_SDK)
 endif()
 
 juce_add_plugin (S6000
-    COMPANY_NAME "dominikHop"
-    COMPANY_COPYRIGHT "(c) dominikHop"
-    COMPANY_WEBSITE "https://www.instagram.com/dominkhop"
+    COMPANY_NAME "dominkHop"
+    COMPANY_COPYRIGHT "(c) dominkHop"
+    COMPANY_WEBSITE "https://github.com/jomd7777/S6000"
     BUNDLE_ID com.dominikhop.s6000
     PRODUCT_NAME "S6000"
     DESCRIPTION "AKAI S6000 style stereo digital sampler - OS 2.14"

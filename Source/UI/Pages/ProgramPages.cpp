@@ -4,7 +4,7 @@
      MAIN, OUTPUT, MIDI/TUNE, EDIT USER, PITCHBEND, LFO 1, LFO 2, KEYGROUP,
      ZONES (4 velocity layers), KEYSPAN, KG PITCH/AMP, FILTER (26 types),
      AMP ENVELOPE, FILTER ENVELOPE, AUX ENVELOPE, PROG TOOLS, CREATE PROG
-   (c) dominikHop  -  www.instagram.com/dominkhop
+   (c) dominkHop  -  github.com/jomd7777/S6000
   ==============================================================================
 */
 #include "Common.h"

@@ -1,7 +1,7 @@
 /*
   ==============================================================================
    S6000 Emulation - page system implementation
-   (c) dominikHop  -  www.instagram.com/dominkhop
+   (c) dominkHop  -  github.com/jomd7777/S6000
   ==============================================================================
 */
 #include "PageSystem.h"
@@ -582,7 +582,7 @@ void PageManager::paint (juce::Graphics& g, juce::Rectangle<float> lcd)
         oled::text (g, "MIDI STEREO DIGITAL SAMPLER", lcd.withY (lcd.getY() + 165).withHeight (16), juce::Justification::centred, 10.0f);
         oled::text (g, "OPERATING SYSTEM VERSION " + juce::String (osVersion), lcd.withY (lcd.getY() + 190).withHeight (16), juce::Justification::centred, 11.0f, true);
         oled::text (g, "BOOTING...", lcd.withY (lcd.getY() + 225).withHeight (16), juce::Justification::centred, 10.0f, false, colours::oledDim);
-        oled::text (g, juce::String (juce::CharPointer_UTF8 ("\xc2\xa9")) + " dominikHop  -  www.instagram.com/dominkhop", lcd.withY (lcd.getBottom() - 26).withHeight (16), juce::Justification::centred, 10.0f, false, colours::oledDim);
+        oled::text (g, juce::String (juce::CharPointer_UTF8 ("\xc2\xa9")) + " dominkHop  -  github.com/jomd7777/S6000", lcd.withY (lcd.getBottom() - 26).withHeight (16), juce::Justification::centred, 10.0f, false, colours::oledDim);
         return;
     }
 

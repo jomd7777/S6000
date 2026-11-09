@@ -3,7 +3,7 @@
    S6000 Emulation - UTILITIES (manual p.219-241)
      SYSTEM SETUP, SET CLOCK, PREFERENCES, MIDI SETUP, MIDI FILTER, FX IN/OUTS,
      DISK UTILS, MEMORY TEST, SHOW HARDWARE, SET PLAY KEY, TEST TONE, SAVE O/S
-   (c) dominikHop  -  www.instagram.com/dominkhop
+   (c) dominkHop  -  github.com/jomd7777/S6000
   ==============================================================================
 */
 #include "Common.h"
@@ -379,7 +379,7 @@ public:
             "OUTPUTS     : 16 (8 PAIRS)",
             "SAMPLE RATE : " + juce::String (ctx.proc.getSampleRate(), 0),
             "FORMAT      : " + fmt.toUpperCase(),
-            "(c) dominikHop"
+            "(c) dominkHop"
         };
         for (auto& l : lines) oled::text (g, l, r.removeFromTop (geo::lineH), juce::Justification::centredLeft, 10.5f);
     }

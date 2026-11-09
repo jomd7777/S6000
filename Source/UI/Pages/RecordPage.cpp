@@ -1,7 +1,7 @@
 /*
   ==============================================================================
    S6000 Emulation - RECORD mode (manual p.178-185)
-   (c) dominikHop  -  www.instagram.com/dominkhop
+   (c) dominkHop  -  github.com/jomd7777/S6000
   ==============================================================================
 */
 #include "Common.h"

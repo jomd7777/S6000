@@ -1,6 +1,6 @@
 # S6000 — AKAI S6000 Sampler Emulation (OS Ver. 2.14)
 
-**Created by © dominikHop** — [instagram.com/dominkhop](https://www.instagram.com/dominkhop) · [github.com/jomd7777](https://github.com/jomd7777)
+**Created by © dominkHop** — [github.com/jomd7777/S6000](https://github.com/jomd7777/S6000)
 
 A software recreation of the legendary **AKAI S6000 stereo digital sampler**, built with **JUCE 8** as an
 **AU / VST3 / AAX / Standalone** plug-in. The front panel, the pages and the workflow follow the original
@@ -78,7 +78,7 @@ xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/S6000.vst3
 xattr -dr com.apple.quarantine /Applications/S6000.app
 ```
 
-Then rescan plug-ins in your DAW. In Logic, the AU appears under **AU Instruments › dominikHop › S6000**.
+Then rescan plug-ins in your DAW. In Logic, the AU appears under **AU Instruments › dominkHop › S6000**.
 
 > **AAX note:** Pro Tools only loads AAX plug-ins signed with PACE/iLok. Unsigned builds work in *Pro Tools Developer* only.
 
@@ -135,7 +135,7 @@ Tests/                disk image generator + tests, DSP tests
 
 ## How it was made
 
-The project was designed and directed by **dominikHop** and written together with **Claude (Anthropic)**
+The project was designed and directed by **dominkHop** and written together with **Claude (Anthropic)**
 as an AI coding assistant:
 
 1. The original **S5000/S6000 Operator's Manual** was analysed page by page to map every mode, page,
@@ -164,4 +164,4 @@ as an AI coding assistant:
 AKAI and S6000 are trademarks of their respective owners. This is an independent, non-commercial
 emulation and is not affiliated with or endorsed by AKAI Professional. Use only sound libraries you own.
 
-**© dominikHop**
+**© dominkHop**

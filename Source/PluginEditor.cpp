@@ -5,7 +5,7 @@
      * F1..F16 soft keys, DATA wheel, keypad, WINDOW / UNDO / EXIT / ENT-PLAY,
        USER KEYS, MARK / JUMP, mode keys with LEDs, MAIN VOLUME, PHONES LEVEL
      * POWER switch (lower left) with boot screen
-   (c) dominikHop  -  www.instagram.com/dominkhop
+   (c) dominkHop  -  github.com/jomd7777/S6000
   ==============================================================================
 */
 #include "PluginEditor.h"
@@ -135,14 +135,14 @@ S6000Panel::S6000Panel (S6000AudioProcessor& p, PageManager& pm)
     addAndMakeVisible (power);
     power.setTooltip ("POWER");
 
-    credit.setText (juce::String (juce::CharPointer_UTF8 ("S6000  \xe2\x80\xa2  OS VER. 2.14  \xe2\x80\xa2  creador \xc2\xa9 dominikHop")), juce::dontSendNotification);
+    credit.setText (juce::String (juce::CharPointer_UTF8 ("S6000  \xe2\x80\xa2  OS VER. 2.14  \xe2\x80\xa2  creador \xc2\xa9 dominkHop")), juce::dontSendNotification);
     credit.setFont (fonts::panel (11.0f, true));
     credit.setColour (juce::Label::textColourId, colours::label);
     credit.setJustificationType (juce::Justification::centredRight);
     addAndMakeVisible (credit);
-    instagram.setFont (fonts::panel (11.0f, true), false, juce::Justification::centredLeft);
-    instagram.setColour (juce::HyperlinkButton::textColourId, colours::akaiRed);
-    addAndMakeVisible (instagram);
+    webLink.setFont (fonts::panel (11.0f, true), false, juce::Justification::centredLeft);
+    webLink.setColour (juce::HyperlinkButton::textColourId, colours::akaiRed);
+    addAndMakeVisible (webLink);
 
     for (auto* b : { &zoomOut, &zoomIn, &zoomLabel })
     {
@@ -188,7 +188,7 @@ void S6000Panel::resized()
     place (phonesLevel, layout::phonesLevel, 56, 56);
     power.setBounds (powerButton);
     credit.setBounds (180, 604, 470, 28);
-    instagram.setBounds (654, 604, 260, 28);
+    webLink.setBounds (654, 604, 260, 28);
     zoomOut.setBounds (1040, 607, 26, 22);
     zoomLabel.setBounds (1068, 607, 58, 22);
     zoomIn.setBounds (1128, 607, 26, 22);

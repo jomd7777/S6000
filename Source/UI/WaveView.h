@@ -5,7 +5,7 @@
      START..END highlight, loop region, edit point flags, slice lines,
      animated play line (audition + MIDI voices) and PLAY / STOP status.
      Peaks are cached per sample version / range / width (CPU friendly).
-   (c) dominikHop  -  www.instagram.com/dominkhop
+   (c) dominkHop  -  github.com/jomd7777/S6000
   ==============================================================================
 */
 #pragma once

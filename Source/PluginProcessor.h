@@ -2,7 +2,7 @@
   ==============================================================================
    AKAI S6000 style sampler  -  OS Ver. 2.14 emulation
    AU / VST3 / AAX / Standalone   -   JUCE 8
-   (c) dominikHop  -  www.instagram.com/dominkhop
+   (c) dominkHop  -  github.com/jomd7777/S6000
   ==============================================================================
 */
 #pragma once
